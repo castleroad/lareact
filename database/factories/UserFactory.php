@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
+ * @extends Factory<\App\Models\User>
  */
 class UserFactory extends Factory
 {
@@ -33,54 +33,6 @@ class UserFactory extends Factory
     {
         return $this->state(fn(array $attributes) => [
             'email_verified_at' => null,
-        ]);
-    }
-
-    /**
-     * Indicate that the user is super admin.
-     *
-     * @return $this
-     */
-    public function superAdmin(): static
-    {
-        return $this->state(fn(array $attributes) => [
-            'role' => 'Super Admin',
-        ]);
-    }
-
-    /**
-     * Indicate that the user is admin.
-     *
-     * @return $this
-     */
-    public function admin(): static
-    {
-        return $this->state(fn(array $attributes) => [
-            'role' => 'Admin',
-        ]);
-    }
-
-    /**
-     * Indicate that the user is manager.
-     *
-     * @return $this
-     */
-    public function manager(): static
-    {
-        return $this->state(fn(array $attributes) => [
-            'role' => 'Manager',
-        ]);
-    }
-
-    /**
-     * Indicate that the user is user.
-     *
-     * @return $this
-     */
-    public function user(): static
-    {
-        return $this->state(fn(array $attributes) => [
-            'role' => 'User',
         ]);
     }
 }

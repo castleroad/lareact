@@ -157,11 +157,6 @@ return [
 
     'providers' => ServiceProvider::defaultProviders()->merge([
         /*
-         * Package Service Providers...
-         */
-        Spatie\Permission\PermissionServiceProvider::class,
-
-        /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
@@ -169,6 +164,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        /*
+         * Package Service Providers...
+         */
+        Spatie\Permission\PermissionServiceProvider::class,
+
     ])->toArray(),
 
     /*
